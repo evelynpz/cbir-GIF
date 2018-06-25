@@ -1,0 +1,29 @@
+/*
+Norwegian University of Science and Technology
+Content-based Indexing and Retrieval
+Project: GIF Image Retrieval in Cloud Computing Environment
+Partners: Evelyn Paiz & Nadile Nunes
+Instructor: Sule Yildirim
+Description: Main css.
+Ref: https://www.pyimagesearch.com/2014/12/08/adding-web-interface-image-search-engine-flask/
+*/
+
+.center-container {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+ 
+.active {
+  border: 5px solid red;
+}
+
+.query-img {
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.result-img {
+  max-width: 100px;
+  max-height: 100px;
+}

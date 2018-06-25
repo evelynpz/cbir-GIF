@@ -1,0 +1,54 @@
+<!--
+     Norwegian University of Science and Technology
+     Content-based Indexing and Retrieval
+     Project: GIF Image Retrieval in Cloud Computing Environment
+     Partners: Evelyn Paiz & Nadile Nunes
+     Instructor: Sule Yildirim
+     Description: index html.
+     Ref: https://www.pyimagesearch.com/2014/12/08/adding-web-interface-image-search-engine-flask/
+ -->
+
+{% extends "_base.html"%}
+
+{% block content %}
+
+<div class="row">
+
+    <div class="col-md-7">
+        <h2>Select an Image</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <p><img src="{{ url_for('static', filename='dataset/tumblr_mevmyaKtDf1rgvhr8o1_500.gif') }}"  class="img query-img"></p>
+                <p><img src="dataset/tumblr_nok4eeONTv1s2yegdo1_400.gif" style="height: 250px;" class="img"></p>
+            </div>
+            <div class="col-md-6">
+                <p><img src="dataset/tumblr_mllh01J96X1s9npefo1_250.gif" class="img query-img"></p>
+                <p><img src="dataset/tumblr_nqlr0rn8ox1r2r0koo1_400.gif" class="img query-img"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 col-md-offset-1">
+        <h2>Results</h2>
+        <br>
+        <p id="searching">Searching...</p>
+        <p id="error">Oh no! No results! Check your internet connection.</p>
+        <p id="time"></p>
+        <table class="table" id="results-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="results">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<br>
+
+{% endblock %}
